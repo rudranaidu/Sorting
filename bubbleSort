@@ -1,0 +1,30 @@
+In bubble sort we start from right to left and compare each element with its predessor (left element) and  bubbled up the min element to lefft by 
+repeated exchanges. we wil continue this with n times.
+In bubble sort no of swaps are more. In selection sort swapping operations are fewer.
+
+Time complexity of Selection & bubble sort is O(n^2)
+    
+    
+    static ArrayList<Integer> bubble_sort(ArrayList<Integer> arr) {
+        // Write your code here.
+        
+        int size = arr.size();
+        
+        for(int i=0;i<size-1;i++){
+            
+            for (int right = size-1; right >= i+1 ; right --) {
+                
+                if (arr.get(right)< arr.get(right-1)) {
+                    swap (arr, right, right-1);
+                }
+            }
+            
+        }
+        return arr;
+    }
+
+static void swap(ArrayList<Integer> arr, int a, int b){
+    int temp = arr.get(a);
+    arr.set(a, arr.get(b));
+    arr.set(b, temp);
+}
