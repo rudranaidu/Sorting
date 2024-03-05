@@ -39,3 +39,11 @@
            }
            return arr;
     }
+
+Time complexity : O(n logn)
+
+Logn -> every time we are dividing the array into two halves
+n -> merging n elements.
+
+Merge sort achieves this time complexity because it recursively divides the array into halves until each subarray has only one element (the base case),
+and then it merges the sorted subarrays together. The merging operation takes O(n) time
