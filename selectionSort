@@ -1,0 +1,28 @@
+Selection sort contains many passes.
+At each pass we select one min element and put it in right place.
+next pass, takes next minimum element
+This involves swapping to bring the min value to right position.
+
+
+static ArrayList<Integer> selection_sort(ArrayList<Integer> arr) {
+         int len = arr.size();
+         for(int i=0;i<len-1;i++) {
+             int min = arr.get(i);
+             int minIndex = i;
+             for(int j=i+1;j<len;j++) {
+                 if(arr.get(j) < min){
+                     min = arr.get(j);
+                     minIndex = j;
+                 }
+             }
+             swap(arr, i, minIndex);
+         }
+        return  arr;
+    }
+static ArrayList<Integer> swap(ArrayList<Integer> arr ,int a, int b) {
+     int temp = arr.get(a);
+     arr.set(a, arr.get(b));
+     arr.set(b, temp);
+     return arr;
+ }
+   
