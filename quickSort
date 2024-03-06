@@ -1,1 +1,7 @@
+If the pivot is smallest/largest, then split will be extremely skewed. worst case O(n^2)
+Average case & Best case is O(nlogn)
+
+In-Place Partiioning: Lomuto (without using auxilary array)
+
+
 
